@@ -42,6 +42,14 @@ config NICE_VIEW_WIDGET_STATUS
     select LV_USE_ANIMIMG 
     select LV_USE_ANIMATION
 
+config USE_SONIC_ANIMATION
+    bool "Use Sonic animation frames instead of Corro"
+    default n
+    help
+      When enabled, the peripheral status widget will reference 12 frames named
+      sonic01..sonic12 (140x68, 1-bit, LVGL C arrays). Provide these symbols in
+      boards/shields/nice_view_custom/widgets/art.c or a separate file.
+
 config NICE_VIEW_WIDGET_INVERTED
     bool "Invert custom status widget colors"
 

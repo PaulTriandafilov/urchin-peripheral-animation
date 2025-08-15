@@ -23,6 +23,35 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "peripheral_status.h"
 
+#if IS_ENABLED(CONFIG_USE_SONIC_ANIMATION)
+LV_IMG_DECLARE(sonic01);
+LV_IMG_DECLARE(sonic02);
+LV_IMG_DECLARE(sonic03);
+LV_IMG_DECLARE(sonic04);
+LV_IMG_DECLARE(sonic05);
+LV_IMG_DECLARE(sonic06);
+LV_IMG_DECLARE(sonic07);
+LV_IMG_DECLARE(sonic08);
+LV_IMG_DECLARE(sonic09);
+LV_IMG_DECLARE(sonic10);
+LV_IMG_DECLARE(sonic11);
+LV_IMG_DECLARE(sonic12);
+
+const lv_img_dsc_t *anim_imgs[] = {
+    &sonic01,
+    &sonic02,
+    &sonic03,
+    &sonic04,
+    &sonic05,
+    &sonic06,
+    &sonic07,
+    &sonic08,
+    &sonic09,
+    &sonic10,
+    &sonic11,
+    &sonic12,
+};
+#else
 LV_IMG_DECLARE(corro01);
 LV_IMG_DECLARE(corro02);
 LV_IMG_DECLARE(corro03);
@@ -50,6 +79,7 @@ const lv_img_dsc_t *anim_imgs[] = {
     &corro11,
     &corro12,
 };
+#endif
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
